@@ -1,0 +1,162 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #e63946;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd60a; /* Change color on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Add some space above the table */
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Add transition for background */
+}
+
+th {
+    background: #e63946;
+    color: white;
+}
+
+tbody tr {
+    transition: background-color 0.3s; /* Add transition for row */
+}
+
+tbody tr:hover {
+    background-color: #f1c40f; /* Change background color on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+}
+.tab.active {
+    background-color: #ddd;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+#seasonNavigationBar {
+    background-color: #333;
+    text-align: center;
+    padding: 0.5px;
+}
+
+#seasonNavigationBar ul {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+#seasonNavigationBar ul li {
+    margin: 0 15px;
+}
+
+#seasonNavigationBar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+#seasonNavigationBar ul li a:hover {
+    color: #ffd60a;
+}
+
+#seasonNavigationBar ul li a.active-season {
+    background-color: #ff9900; /* Highlight color */
+    color: black;
+    font-weight: bold;
+}

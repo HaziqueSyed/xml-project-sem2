@@ -1,0 +1,223 @@
+/* styles.css */
+
+/* Reset some default styles */
+
+body, h1, h2, p, ul, table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #e63946;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd60a; /* Change color on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Style the input field and center it */
+input[type="text"] {
+    padding: 10px;
+    width: 50%; /* Adjust the width of the input */
+    margin: 15px auto; /* Center horizontally with margin */
+    display: block; /* Ensure it is a block element */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Optional: center the text inside the input */
+}
+
+/* You may also want to center the container of the input */
+.input-container {
+    display: flex;
+    justify-content: center; /* Center the container of the input */
+    align-items: center;
+    height: 100%; /* Make sure the container takes full height if needed */
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.gallery_1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.gallery_1 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        /* Modal close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ddd;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #e63946;
+            color: #fff;
+            padding: 40px 20px;
+            font-size: 14px;
+          }
+          
+          .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .contact-info,
+          .social-media,
+          .legal-links {
+            flex-basis: 30%;
+          }
+          
+          .contact-info h4,
+          .social-media h4,
+          .legal-links h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          
+          .contact-info p,
+          .contact-info a {
+            margin-bottom: 10px;
+          }
+          
+          .social-icons {
+            display: block;
+            justify-content: flex-start;
+          }
+          
+          .social-icon {
+            margin-right: 15px;
+          }
+          
+          .social-icon img {
+            max-height: 24px;
+          }
+          
+          .legal-links a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+          }
+          
+          .legal-links a:hover {
+            text-decoration: underline;
+          }
+          
+          .copyright {
+            text-align: center;
+            margin-top: 40px;
+          }

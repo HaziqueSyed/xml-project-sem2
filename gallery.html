@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunzine Photo Gallery</title>
+  <link rel="stylesheet" href="./styles/gallery.css">
+  <script src="/scripts/gallery.js" defer></script>
+
+  
+</head>
+<body>
+  <header>
+    <h1>F1 Driver Management</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Features</a></li>
+            <li><a href="driver.html">Drivers</a></li>
+            <li><a href="carData.html">Cars</a></li>
+            <li><a href="position.html">Positions</a></li>
+            <li><a href="#grands-prix">Grands Prix</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#buy">Buy Now</a></li>
+        </ul>
+    </nav>
+</header>
+<input type="text" id="searchInput" placeholder="Search for images..." />
+  <div class="gallery_1"  id="imageGallery" >
+    <img src="Images/images.jpeg" alt="driver" id="driver">
+    <img src="Images/thumb_87651.jpg" alt="car" id="car">
+    <img src="Images/download.jpeg" alt="team_celebration" id="celebration">
+    <img src="Images/gettyimages-1325270585-640x640.jpg" alt="venue" id="venue">
+  </div>
+  <div class="gallery" id="imageGallery"></div>
+
+  <div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImage" src="" alt="Enlarged Image">
+</div>
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <h4>Contact Us</h4>
+      <p>+1 (868) 892-0777</p>
+      <a href="mailto:info@stacksports.com">info@stacksports.com</a>
+      <p>5360 Legacy Dr #150 Plano, TX 75024</p>
+    </div>
+    <div class="social-media">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><img src="Images/icons8-facebook-24.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="Images/icons8-twitterx-24.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="Images/icons8-instagram-24.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="Images/icons8-youtube-24.png" alt="YouTube"></a>
+        <a href="#" class="social-icon"><img src="Images/icons8-linkedin-24.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+    <div class="legal-links">
+      <h4>Legal</h4>
+      <a href="#">Privacy Statement</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">License Agreement</a>
+      <a href="#">Children's Privacy Policy</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 StackSports. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
