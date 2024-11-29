@@ -19,33 +19,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     /* ********************************** Search Function *************************************** */
-// Function to filter positions based on input
+    // Search in driver's list
     document.getElementById('positionFilterInput').addEventListener('input', function() {
         
         const filterValue = this.value.toLowerCase(); // Get the input value and convert to lowercase
         const tableBody = document.getElementById('tableBody'); // Get the table body
         const rows = tableBody.getElementsByTagName('tr'); // Get all rows in the table body
 
-        // Loop through all rows and filter based on the input
+        // Looping through all rows and filter based on the input
         Array.from(rows).forEach(function(row) {
             const cells = row.getElementsByTagName('td'); // Get all cells in the row
             let rowText = ''; // Variable to hold the text content of the row
             
-            // Loop through each cell in the row and append its text to rowText
+            // Looping through each cell in the row and append its text to rowText
             Array.from(cells).forEach(function(cell) {
                 rowText += cell.textContent.toLowerCase() + ' '; // Concatenate the cell's text
             });
 
-            // If any part of the rowText matches the filterValue, show the row; otherwise, hide it
+            // search for the character entred in the search bar
             if (rowText.includes(filterValue)) {
-                row.style.display = ''; // Show row
+                row.style.display = ''; // Show the matching row
             } else {
-                row.style.display = 'none'; // Hide row
+                row.style.display = 'none'; // Hide the unmatched row
             }
         });
     });
 
 
+    // Search in constructor list
     document.getElementById('constructorFilterInput').addEventListener('input', function() {
         const filterValue = this.value.toLowerCase(); // Get the input value and convert to lowercase
         const tableBody = document.getElementById('constructorTableBody'); // Get the table body
@@ -122,8 +123,6 @@ async function  ConstructorCurrentStandings(season = "current") {
         tbody.innerHTML = '';
         const response = await fetch(`https://ergast.com/api/f1/${season}/constructorStandings.json`); // https://ergast.com/api/f1/2008/constructorStandings
 
-        // const res = await fetch("https://ergast.com/mrd/feed/"); //https://ergast.com/mrd/feed/
-        // console.log(res.text());
         if(!response.ok) {
             throw new Error(`Network Error: ${response.status}`);
         }
@@ -137,7 +136,6 @@ async function  ConstructorCurrentStandings(season = "current") {
         standings.forEach(standing => {
             const constructor = standing.Constructor.name;
                 const pos = standing.position;
-                // const team = standing.Constructors[0].name;
                 const pts = standing.points;
                 const nation = standing.Constructor.nationality;
                 // console.log(`Driver: ${driver}, Pos: ${pos}, Team: ${team}, Points: ${pts}`);
@@ -148,8 +146,6 @@ async function  ConstructorCurrentStandings(season = "current") {
                         <td>${constructor}</td>
                         <td>${pts}</td>
                     `;
-                    // <td>${team}</td>
-                    // <td>${nation}</td>
                     tbody.appendChild(row);
         });
     } catch (error) {
@@ -157,17 +153,43 @@ async function  ConstructorCurrentStandings(season = "current") {
     }
 }
 
+/****************************************** Load the season to the navigation bar *********************************** */
 function loadSeasonData(season, element) {
+    
     // Remove the 'active-season' class from all season links
     const seasonLinks = document.querySelectorAll('.season-link');
-    seasonLinks.forEach(link => {
-        link.classList.remove('active-season');
-    });
+    seasonLinks.forEach(link => link.classList.remove('active-season'));
 
-    // Add the 'active-season' class to the clicked season link
+    // Adding 'active-season' class to the clicked season link
     element.classList.add('active-season');
 
-    // Load the driver and constructor standings for the selected season
-    DriverCurrentStandings(season); // Fetch driver standings for selected season
-    ConstructorCurrentStandings(season); // Fetch constructor standings for selected season
+    element.scrollIntoView({
+        behavior: 'smooth', // Smooth scrolling
+        block: 'nearest',  // Ensure it aligns vertically in case of a long list
+        inline: 'center'   // Center the clicked link horizontally in the navigation bar
+    });
+
+    DriverCurrentStandings(season); // Fetching driver standings for selected season
+    ConstructorCurrentStandings(season); // Fetching constructor standings for selected season
 }
+
+
+/* ************************************ season list *********************************************** */
+document.addEventListener("DOMContentLoaded", () => {
+    const seasonList = document.getElementById("seasonList");
+    const currentYear = new Date().getFullYear();
+    const firstYear = 1950; // Start year of F1
+
+    // Generate season links dynamically
+    for (let year = currentYear; year >= firstYear; year--) {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "javascript:void(0);";
+        link.textContent = `${year} Season`;
+        link.className = "season-link";
+        link.onclick = () => loadSeasonData(year, link);
+
+        listItem.appendChild(link);
+        seasonList.appendChild(listItem);
+    }
+});
