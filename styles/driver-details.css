@@ -15,31 +15,54 @@ body {
 }
 
 header {
-    background: #e63946;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background: #e63946;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  align-items: center; /* Vertically align logo, title, and nav */
+  justify-content: space-between; /* Space between logo and title */
+  padding-left: 20px; /* Left padding to ensure space between logo and edge */
 }
 
+/* Logo container */
+header .logo {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+/* Styling for the logo image */
+header .logo img {
+  width: 150px; /* Set a fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Title (h1) styling */
+header h1 {
+  margin: 0;
+  flex-grow: 1; /* Allow h1 to take up available space and center it */
+  text-align: center; /* Center the title horizontally */
+}
+
+/* Navigation menu styles */
 nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffd60a; /* Change color on hover */
+  color: #ffd60a; /* Change color on hover */
 }
+
 
 main {
     padding: 20px;
