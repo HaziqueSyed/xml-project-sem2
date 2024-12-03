@@ -1,0 +1,218 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul{
+
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #e63946;
+    
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center; /* Vertically align logo, title, and nav */
+    justify-content: space-between; /* Space between logo and title */
+    padding-left: 20px; /* Left padding to ensure space between logo and edge */
+}
+
+/* Logo container */
+header .logo {
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+/* Styling for the logo image */
+header .logo img {
+    width: 150px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Title (h1) styling */
+header h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow h1 to take up available space and center it */
+    text-align: center; /* Center the title horizontally */
+}
+
+h2, p{
+    color: white;
+}
+
+/* Navigation menu styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd60a; /* Change color on hover */
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin: 0px 0;
+}
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    margin-left: -20px;
+    margin-top: -20px;
+    
+}
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+.view-btn {
+    background:  #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.view-btn:hover {
+    background:  #e63946;
+}
+section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    .logo {
+        width: 120px; /* Smaller logo size for mobile */
+    }
+    nav ul li {
+        margin: 0 5px;
+    }
+    .view-btn {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .slide-content {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+footer {
+    background-color: #e63946;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-info,
+  .social-media,
+  .legal-links {
+    flex-basis: 30%;
+    text-align: center;
+  }
+  
+  .contact-info h4,
+  .social-media h4,
+  .legal-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p,
+  .contact-info a {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: block;
+    justify-content: flex-start;
+  }
+  
+  .social-icon {
+    margin-right: 15px;
+  }
+  
+  .social-icon img {
+    max-height: 24px;
+  }
+  
+  .legal-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 40px;
+  }
+
