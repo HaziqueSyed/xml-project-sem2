@@ -1,9 +1,8 @@
 /* styles.css */
 
 /* Reset some default styles */
-body, h1, h2, p, ul, .driver-cards {
-    margin: 0;
-    padding: 0;
+body, h1, h2, p, ul{
+
     list-style: none;
 }
 
@@ -12,10 +11,13 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background: #e63946;
+    
     color: white;
     padding: 20px 0;
     display: flex;
@@ -42,6 +44,10 @@ header h1 {
     text-align: center; /* Center the title horizontally */
 }
 
+h2, p{
+    color: white;
+}
+
 /* Navigation menu styles */
 nav ul {
     display: flex;
@@ -64,108 +70,90 @@ nav ul li a:hover {
 }
 
 
-main {
-    padding: 20px;
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin: 0px 0;
 }
-
-section {
-    margin-bottom: 20px;
-    background: white;
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    margin-left: -20px;
+    margin-top: -20px;
+    
+}
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
-
-h2 {
-    margin-bottom: 10px;
+.view-btn {
+    background:  #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
 }
-
-input[type="text"] {
-    margin-bottom: 15px;
-    padding: 10px;
-    width: 98%;
-    border: 1px solid #ccc;
+.view-btn:hover {
+    background:  #e63946;
+}
+section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px;
     border-radius: 5px;
 }
 
-.driver-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    .logo {
+        width: 120px; /* Smaller logo size for mobile */
+    }
+    nav ul li {
+        margin: 0 5px;
+    }
+    .view-btn {
+        padding: 8px 12px;
+    }
 }
 
-.driver-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .slide-content {
+        bottom: 10px;
+        left: 10px;
+    }
 }
-
-.driver-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.driver-card img {
-    max-width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-.driver-card h3 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.driver-card p {
-    text-align: center;
-    font-weight: bold;
-}
-
-
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Fade in effect */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 8px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 footer {
     background-color: #e63946;
     color: #fff;
@@ -227,5 +215,4 @@ footer {
     text-align: center;
     margin-top: 40px;
   }
-  
-  
+

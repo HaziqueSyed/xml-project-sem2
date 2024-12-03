@@ -3,100 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Driver Management</title>
-    <link rel="stylesheet" href="./styles/main.css">
-    <script src="script.js" defer></script>
+    <title>F1 Driver Management - Home</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="/scripts/index.js" defer></script>
+
 </head>
 <body>
     <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="Images/logo1.png" alt="F1 Driver Management Logo">
+          </a>
+        </div>
         <h1>F1 Driver Management</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Features</a></li>
-                <li><a href="driver.html">Drivers</a></li>
-                <li><a href="carData.html">Cars</a></li>
-                <li><a href="position.html">Positions</a></li>
-                <li><a href="#grands-prix">Grands Prix</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#buy">Buy Now</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Features</a></li>
+            <li><a href="driver.html">Drivers</a></li>
+            <li><a href="carData.html">Cars</a></li>
+            <li><a href="position.html">Positions</a></li>
+            <li><a href="grandprix.html">Grands Prix</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="buy.html">Buy Now</a></li>
+          </ul>
         </nav>
-        
-    </header>
+      </header>
 
     <main>
-        <section id="features">
-            <h2>Features</h2>
-            <p>Build your ultimate driver line-up using F1® Manager 2024's Driver Database.</p>
+        <section id="slider" class="slider">
+            <div class="slide" style="display: block;">
+                <img src="Images/91461b108177549.5fb7c9f5906b9.jpg" alt="F1 Slider Image 1">
+                <div class="slide-content">
+                    <h2>Welcome to F1 Driver Management</h2>
+                    <p>Explore the ultimate platform for F1 enthusiasts! Scroll down to discover what our website has to offer.</p>
+                    <button class="view-btn" onclick="window.location.href='driver.html'">View Drivers</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Images/gettyimages-1325270585-640x640.jpg" alt="F1 Slider Image 2">
+                <div class="slide-content">
+                    <h2>Grand Prix</h2>
+                    <p>Stay updated with schedules & results</p>
+                    <button class="view-btn" onclick="window.location.href='grandprix.html'">View Grand Prix</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/download.jpeg" alt="F1 Slider Image 3">
+                <div class="slide-content">
+                    <h2>News</h2>
+                    <p>Catch up with the latest F1 news</p>
+                    <button class="view-btn" onclick="window.location.href='news.html'">View News</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/f1-australian-grand-prix-preview-curves-swerves.webp" alt="F1 Slider Image 4">
+                <div class="slide-content">
+                    <h2>Gallery</h2>
+                    <p>Browse high-quality images of F1 cars</p>
+                    <button class="view-btn" onclick="window.location.href='gallery.html'">View Gallery</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/images.jpeg" alt="F1 Slider Image 5">
+                <div class="slide-content">
+                    <h2>FAQ</h2>
+                    <p>Get answers to common questions</p>
+                    <button class="view-btn" onclick="window.location.href='faq.html'">View FAQ</button>
+                </div>
+            </div>
+            <span class="arrow arrow-left" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="arrow arrow-right" onclick="moveSlide(1)">&#10095;</span>
         </section>
 
         <section id="drivers">
             <h2>Drivers</h2>
-            <input type="text" id="filterInput" placeholder="Filter drivers...">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Driver</th>
-                        <th>CNR</th>
-                        <th>BRK</th>
-                        <th>RCT</th>
-                        <th>CTR</th>
-                        <th>SMT</th>
-                        <th>ADP</th>
-                        <th>OVT</th>
-                        <th>DEF</th>
-                        <th>ACC</th>
-                        <th>OVR</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be populated by JavaScript -->
-                </tbody>
-            </table>
+            <p>Build your ultimate driver line-up using F1® Manager 2024's Driver Database.</p>
+            <a href="drivers.html" class="view-btn">Learn more about Drivers</a>
+        </section>
+
+        <section id="grand-prix">
+            <h2>Grand Prix</h2>
+            <p>Stay updated with the latest schedules and results of Grand Prix races.</p>
+            <a href="grandprix.html" class="view-btn">Discover the Grand Prix</a>
+        </section>
+
+        <section id="news">
+            <h2>News</h2>
+            <p>Catch up with the latest news and updates from the F1 world.</p>
+            <a href="news.html" class="view-btn">Read the Latest News</a>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Enjoy high-quality images of F1 cars and races.</p>
+            <a href="gallery.html" class="view-btn">View the Gallery</a>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <p>Have questions? Visit our FAQ section.</p>
+            <a href="faq.html" class="view-btn">Visit FAQ</a>
+        </section>
+
+        <section id="buy">
+            <h2>Buy Now</h2>
+            <p>Ready to take your F1 experience to the next level? Purchase our exclusive package today!</p>
+            <a href="buy.html" class="view-btn">Buy Now</a>
         </section>
     </main>
 
-    <!-- Modal Structure -->
-    <div id="driverModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalDriverName"></h2>
-            <p id="modalDriverStats"></p>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>+1 (868) 892-0777</p>
+                <a href="mailto:info@stacksports.com">info@stacksports.com</a>
+                <p>5360 Legacy Dr #150 Plano, TX 75024</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="Images/icons8-facebook-24.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-twitterx-24.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-youtube-24.png" alt="YouTube"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-linkedin-24.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="legal-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Statement</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">License Agreement</a>
+                <a href="#">Children's Privacy Policy</a>
+            </div>
         </div>
-    </div>
+        <div class="copyright">
+            <p>&copy; 2024 StackSports. All rights reserved.</p>
+        </div>
+    </footer>
 
- 
-<footer>
-    <div class="footer-content">
-      <div class="contact-info">
-        <h4>Contact Us</h4>
-        <p>+1 (868) 892-0777</p>
-        <a href="mailto:info@stacksports.com">info@stacksports.com</a>
-        <p>5360 Legacy Dr #150 Plano, TX 75024</p>
-      </div>
-      <div class="social-media">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><img src="Images/icons8-facebook-24.png" alt="Facebook"></a>
-          <a href="#" class="social-icon"><img src="Images/icons8-twitterx-24.png" alt="Twitter"></a>
-          <a href="#" class="social-icon"><img src="Images/icons8-instagram-24.png" alt="Instagram"></a>
-          <a href="#" class="social-icon"><img src="Images/icons8-youtube-24.png" alt="YouTube"></a>
-          <a href="#" class="social-icon"><img src="Images/icons8-linkedin-24.png" alt="LinkedIn"></a>
-        </div>
-      </div>
-      <div class="legal-links">
-        <h4>Legal</h4>
-        <a href="#">Privacy Statement</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">License Agreement</a>
-        <a href="#">Children's Privacy Policy</a>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2024 StackSports. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
