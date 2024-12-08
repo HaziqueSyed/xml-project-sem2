@@ -17,7 +17,21 @@ header {
     background: #e63946;
     color: white;
     padding: 20px 0;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Vertically align logo, title, and nav */
+    justify-content: space-between; /* Space between logo and title */
+    padding-left: 20px; /* Left padding to ensure space between logo and edge */
+}
+
+header .logo img {
+    width: 150px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow h1 to take up available space and center it */
+    text-align: center; /* Center the title horizontally */
 }
 
 nav ul {
@@ -37,8 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd60a;
-    /* Change color on hover */
+    color: #ffd60a; /* Change color on hover */
 }
 
 main {
