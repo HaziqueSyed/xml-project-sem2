@@ -334,3 +334,65 @@ footer {
         /* Change cursor to pointer on hover */
     }
 }
+
+footer {
+    background-color: #e63946;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-info,
+  .social-media,
+  .legal-links {
+    flex-basis: 30%;
+    text-align: center;
+  }
+  
+  .contact-info h4,
+  .social-media h4,
+  .legal-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p,
+  .contact-info a {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: block;
+    justify-content: flex-start;
+  }
+  
+  .social-icon {
+    margin-right: 15px;
+  }
+  
+  .social-icon img {
+    max-height: 24px;
+  }
+  
+  .legal-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 40px;
+  }
