@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 Driver Management</title>
     <link rel="stylesheet" href="./styles/pos.css">
-    <script src="scripts/pos.js"></script>
+    <script src="./scripts/pos.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-          <a href="index.html">
-            <img src="Images/logo1.png" alt="F1 Driver Management Logo">
-          </a>
-        </div>
         <h1>F1 Driver Management</h1>
         <nav>
-          <ul>
-            <li><a href="index.html">Features</a></li>
-            <li><a href="driver.html">Drivers</a></li>
-            <li><a href="position.html">Positions</a></li>
-            <li><a href="grandprix.html">Grands Prix</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="buy.html">Buy Now</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Features</a></li>
+                <li><a href="driver.html">Drivers</a></li>
+                <li><a href="position.html">Positions</a></li>
+                <li><a href="#grands-prix">Grands Prix</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#buy">Buy Now</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
 
     <main>
         <section id="positions">
             <h2>Positions</h2>
 
             <nav id="seasonNavigationBar">
-                <ul>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2024, this)">2024 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2023, this)">2023 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2022, this)">2022 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2021, this)">2021 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2020, this)">2020 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2019, this)">2019 Season</a></li>
-                    <li><a href="javascript:void(0);" class="season-link" onclick="loadSeasonData(2018, this)">2018 Season</a></li>
-                    <!-- Add more seasons as needed -->
+                <ul id="seasonList">
+                    <!-- Loading season via script -->
                 </ul>
             </nav>
 
@@ -52,74 +42,47 @@
                 <div class="tab" id="constructorTab">Constructor Standings</div>
             </div>
 
-            <!-- Search bar and Position tab -->
+
             <div class="tab-content active" id="driverStandingContent">
-            <input type="text" id="positionFilterInput" placeholder="Type to Filter...">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Driver</th>
-                        <th>Team</th>
-                        <th>Driver Code</th>
-                        <th>Total Points</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Rows will be populated by JavaScript -->
-                </tbody>
-            </table>
+                <!-- using AJAX to setup and load contents of the table -->
             </div>
 
-
-            <!-- Search bar and Constructor tab -->
             <div class="tab-content" id="constructorStandingContent">
-                <input type="text" id="constructorFilterInput" placeholder="Type to Filter...">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Constructor</th>
-                            <th>Points</th>
-                        </tr>
-                    </thead>
-                    <tbody id="constructorTableBody">
-                        <!-- Rows for constructor standings will be populated here -->
-                    </tbody>
-                </table>
+                <!-- using AJAX to setup and load contents of the table -->
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-          <div class="contact-info">
-            <h4>Contact Us</h4>
-            <p>+1 (868) 892-0777</p>
-            <a href="mailto:info@stacksports.com">info@stacksports.com</a>
-            <p>5360 Legacy Dr #150 Plano, TX 75024</p>
-          </div>
-          <div class="social-media">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="#" class="social-icon"><img src="Images/icons8-facebook-24.png" alt="Facebook"></a>
-              <a href="#" class="social-icon"><img src="Images/icons8-twitterx-24.png" alt="Twitter"></a>
-              <a href="#" class="social-icon"><img src="Images/icons8-instagram-24.png" alt="Instagram"></a>
-              <a href="#" class="social-icon"><img src="Images/icons8-youtube-24.png" alt="YouTube"></a>
-              <a href="#" class="social-icon"><img src="Images/icons8-linkedin-24.png" alt="LinkedIn"></a>
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>+1 (868) 892-0777</p>
+                <a href="mailto:info@stacksports.com">info@stacksports.com</a>
+                <p>5360 Legacy Dr #150 Plano, TX 75024</p>
             </div>
-          </div>
-          <div class="legal-links">
-            <h4>Legal</h4>
-            <a href="#">Privacy Statement</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">License Agreement</a>
-            <a href="#">Children's Privacy Policy</a>
-          </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="Images/icons8-facebook-24.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-twitterx-24.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-instagram-24.png" alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-youtube-24.png" alt="YouTube"></a>
+                    <a href="#" class="social-icon"><img src="Images/icons8-linkedin-24.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="legal-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Statement</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">License Agreement</a>
+                <a href="#">Children's Privacy Policy</a>
+            </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2024 StackSports. All rights reserved.</p>
+            <p>&copy; 2024 StackSports. All rights reserved.</p>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>
