@@ -295,24 +295,8 @@ footer {
 
 /* Large screens (desktops) */
 @media (min-width: 1025px) {
-    body {
-        font-size: 18px;
-        /* Standard font size for larger screens */
-    }
+ 
 
-    header {
-        padding: 30px 0;
-    }
-
-    nav ul {
-        justify-content: center;
-        /* Center the nav items */
-    }
-
-    nav ul li {
-        margin: 0 20px;
-        /* Increase space between items */
-    }
 
     table {
         font-size: 16px;
